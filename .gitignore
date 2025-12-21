@@ -1,0 +1,3 @@
+# But keep the folders themselves
+!site/.gitkeep
+!server/.gitkeep
