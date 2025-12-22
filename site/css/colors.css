@@ -1,2 +1,14 @@
 /* All site color variables, including the themes for each map. */
 
+:root {
+    --site-font: Arial, sans-serif;
+
+    --site-bg: #151515;
+    --input-bg: #222222;
+    --danger-red: #ff0000;
+
+    --standard-cyan: #00fff0;
+    --standard-pink: #ff00ff;
+    --cyan-pink-gradient: linear-gradient(to right, var(--standard-cyan), var(--standard-pink));
+    --standard-white: #ffffff;
+}

@@ -5,17 +5,18 @@ function App() {
   return (
     <>
         <div className="home-page-container">
-            <h1 className="site-title"><span>Super</span> <span>Strikers</span></h1>
+            <h1 className="site-title"><span className="site-title-1">Super</span> <span className="site-title-2">Strikers</span></h1>
             <p
-                className=""
-                id="profanity-error"
+                className="name-warning"
             >
                 Please choose a clean nickname!
             </p>
             <input
                 type="text"
-                id="nickname-enter-form"
-                data-cy="nickname-enter-form"
+                maxLength={24}
+                className="name-input"
+                placeholder="Enter Nickname"
+                title="Enter your nickname"
                 /*
                 value={nickname}
                 onChange={(e) => setNickname(e.target.value)}
@@ -26,17 +27,18 @@ function App() {
                     }
                 }}
                 */
-                maxLength={20}
-                className=""
-                placeholder="Enter Nickname"
-                title="Enter your nickname"
             />
-            <button>
-                Find Match
-            </button>
-            <button>
-                Custom Match
-            </button>
+            <div className="start-btns-container">
+                <button className="start-btn">
+                    Find Match
+                </button>
+                <button className="start-btn">
+                    Custom Match
+                </button>
+            </div>
+        </div>
+        <div>
+            <p>Hi</p>
         </div>
     </>
   )

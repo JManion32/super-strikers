@@ -1,9 +1,74 @@
 .home-page-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .site-title {
-  font-size: 5rem;
+    font-size: 7rem;
+    margin: 0;
+}
+
+.site-title-1 {
+    color: var(--standard-cyan);
+}
+
+.site-title-2 {
+    color: var(--standard-pink);
+}
+
+.name-warning {
+    color: var(--danger-red);
+    font-weight: bold;
+    margin-bottom: 0.45rem;
+}
+
+.name-input {
+    width: 20rem;
+    padding: 0.65rem;
+    border-radius: 0.50rem;
+    font-size: 1rem;
+    font-weight: bold;
+    background: var(--input-bg);
+    color: var(--standard-white);
+    border: solid 1px var(--standard-cyan);
+}
+
+.gradient-border {
+  position: relative;
+  border-radius: 8px;
+  background: var(--input-bg); /* inner background */
+}
+
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: -2px; /* border thickness */
+  border-radius: inherit;
+  background: var(--cyan-pink-gradient);
+  z-index: -1;
+}
+
+.name-input:focus,
+.name-input:focus-visible {
+    outline: none;
+    box-shadow: none;
+    border: 1px var(--standard-cyan);
+}
+
+.start-btns-container {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.start-btn {
+    background: var(--input-bg);
+    color: var(--standard-pink);
+    font-weight: bold;
+    padding: 0.75rem 1rem;
+    margin-top: 3rem;
+    font-size: 1.25rem;
+    border-radius: 0.50rem;
+    border: solid 1px var(--cyan-pink-gradient);
 }
