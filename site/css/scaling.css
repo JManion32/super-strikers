@@ -1,0 +1,34 @@
+/* Mobile */
+@media (max-width: 640px) {
+    :root {
+
+    }
+}
+
+/* Tablets */
+@media (min-width: 641px) {
+    :root {
+
+    }
+}
+
+/* Small Laptops */
+@media (min-width: 1024px) {
+    :root {
+
+    }
+}
+
+/* Desktop*/
+@media (min-width: 1280px) {
+    :root {
+
+    }
+}
+
+/* Big Desktops */
+@media (min-width: 2560px) {
+    :root {
+
+    }
+}

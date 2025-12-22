@@ -29,16 +29,22 @@ function App() {
                 */
             />
             <div className="start-btns-container">
-                <button className="start-btn">
-                    Find Match
+                <button className="start-btn gradient-border">
+                    <span className="gradient-text">Find Match</span>
                 </button>
-                <button className="start-btn">
-                    Custom Match
+                <button className="start-btn gradient-border">
+                    <span className="gradient-text">Custom Match</span>
                 </button>
             </div>
         </div>
-        <div>
-            <p>Hi</p>
+        <div className="home-footer-container">
+            <a className="footer-link-cyan">What's New?</a>
+            <span>|</span>
+            <a className="footer-link-pink">Share</a>
+            <span>|</span>
+            <a className="footer-link-cyan">Feature Request</a>
+            <span>|</span>
+            <a className="footer-link-pink">Privacy Policy</a>
         </div>
     </>
   )

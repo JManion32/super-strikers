@@ -3,12 +3,15 @@
 :root {
     --site-font: Arial, sans-serif;
 
-    --site-bg: #151515;
-    --input-bg: #222222;
+    --site-bg: #141414;
+    --secondary-bg: #222222;
     --danger-red: #ff0000;
 
     --standard-cyan: #00fff0;
+    --standard-cyan-hover: #80fff7;
     --standard-pink: #ff00ff;
+    --standard-pink-hover: #ff34ff;
     --cyan-pink-gradient: linear-gradient(to right, var(--standard-cyan), var(--standard-pink));
     --standard-white: #ffffff;
+    --standard-black: #000000;
 }
