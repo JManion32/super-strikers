@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 112 112" width="112" height="112">
+  <defs>
+    <clipPath id="leftHalf">
+      <rect x="0" y="0" width="56" height="112"/>
+    </clipPath>
+    <clipPath id="rightHalf">
+      <rect x="56" y="0" width="56" height="112"/>
+    </clipPath>
+  </defs>
+  
+  <!-- Black filled circle -->
+  <circle cx="56" cy="56" r="46" fill="#000000"/>
+  
+  <!-- Left border - Cyan -->
+  <circle cx="56" cy="56" r="46" fill="none" stroke="#00ffff" stroke-width="16" clip-path="url(#leftHalf)"/>
+  
+  <!-- Right border - Magenta -->
+  <circle cx="56" cy="56" r="46" fill="none" stroke="#ff00ff" stroke-width="16" clip-path="url(#rightHalf)"/>
+</svg>
