@@ -1,10 +1,10 @@
 import { useState } from "react";
 
 import '../css/home.css'
-import '../utils/checkName.ts'
+//import { checkName } from '../utils/checkName.ts'
 
 function App() {
-    //const [nickname] = useState("");
+  const [nickname, setNickname] = useState("");
 
   return (
     <>
@@ -23,16 +23,8 @@ function App() {
                     className="name-input"
                     placeholder="Enter Nickname"
                     title="Enter your nickname"
-                    /*
                     value={nickname}
                     onChange={(e) => setNickname(e.target.value)}
-                    onKeyDown={(e) => {
-                        if (e.key === "Enter" && nickname) {
-                            e.preventDefault();
-                            startGame();
-                        }
-                    }}
-                    */
                 />
                 <div className="start-btns-container">
                     <button className="start-btn gradient-border">
