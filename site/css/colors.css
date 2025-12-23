@@ -2,9 +2,10 @@
 
 :root {
     --site-font: Arial, sans-serif;
+    --site-transition: 0.2s;
 
     --site-bg: #141414;
-    --secondary-bg: #222222;
+    --secondary-bg: #202020;
     --danger-red: #ff0000;
 
     --standard-cyan: #00fff0;

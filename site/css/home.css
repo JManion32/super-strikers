@@ -47,14 +47,16 @@
     border-radius: 0.50rem;
     font-size: 1.20rem;
     font-weight: bold;
-    background: var(--secondary-bg);
+    background: var(--site-bg);
     color: var(--standard-white);
     border: solid 1px var(--standard-cyan);
+    transition: var(--site-transition);
 }
 
 .name-input:focus,
 .name-input:focus-visible {
     outline: 1px var(--standard-cyan);
+    background: var(--secondary-bg);
 }
 
 .gradient-border {
@@ -103,14 +105,14 @@
   border-radius: 0.5rem;
   border: none;
   cursor: pointer;
-  transition: 0.25s;
+  transition: var(--site-transition);
 }
 
 .start-btn span {
     background-image: var(--cyan-pink-gradient);
     color: transparent;
     background-clip: text;
-    transition: 0.25s;
+    transition: var(--site-transition);
 }
 
 .start-btn:hover {
@@ -121,7 +123,7 @@
 .footer-link-pink {
     font-size: 1.30rem;
     font-weight: bold;
-    transition: 0.25rem;
+    transition: var(--site-transition);
     min-width: 6rem;
     text-align: center;
 }
