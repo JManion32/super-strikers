@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 112 112" width="112" height="112">
+  <defs>
+    <linearGradient id="borderGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00ffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff00ff;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Black filled rounded rectangle -->
+  <rect x="6" y="6" width="100" height="100" rx="15" ry="15" fill="#000000"/>
+  
+  <!-- Gradient border -->
+  <rect x="6" y="6" width="100" height="100" rx="15" ry="15" fill="none" stroke="url(#borderGradient)" stroke-width="12"/>
+  
+  <!-- Gray center line -->
+  <line x1="56" y1="6" x2="56" y2="106" stroke="#808080" stroke-width="2"/>
+  
+  <!-- Gray center circle -->
+  <circle cx="56" cy="56" r="12" fill="none" stroke="#808080" stroke-width="2"/>
+  
+  <!-- Cyan player on left side -->
+  <circle cx="30" cy="56" r="6" fill="#00ffff"/>
+  
+  <!-- Magenta player on right side -->
+  <circle cx="82" cy="56" r="6" fill="#ff00ff"/>
+</svg>
