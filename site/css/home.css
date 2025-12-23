@@ -1,24 +1,24 @@
 .home-page-container {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .home-content-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex-grow: 1;
-  padding-top: 16rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    padding-top: 16rem;
 }
 
 .home-footer-container {
     position: absolute;
-    bottom: 1.50rem;
+    bottom: 1.5rem;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 1.50rem;
+    gap: 1.5rem;
 }
 
 .site-title {
@@ -45,8 +45,8 @@
 .name-input {
     width: 24rem;
     padding: 0.65rem;
-    border-radius: 0.50rem;
-    font-size: 1.20rem;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
     font-weight: bold;
     background: var(--site-bg);
     color: var(--standard-white);
@@ -61,18 +61,18 @@
 }
 
 .gradient-border {
-  position: relative;
-  border-radius: 8px;
-  background: var(--secondary-bg);
+    position: relative;
+    border-radius: 8px;
+    background: var(--secondary-bg);
 }
 
 .gradient-border::before {
-  content: "";
-  position: absolute;
-  inset: -2px;
-  border-radius: inherit;
-  background: var(--cyan-pink-gradient);
-  z-index: -1;
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    background: var(--cyan-pink-gradient);
+    z-index: -1;
 }
 
 .start-btns-container {
@@ -81,32 +81,17 @@
     flex-direction: column;
 }
 
-.gradient-border {
-  position: relative;
-  border-radius: 8px;
-  background: var(--secondary-bg);
-}
-
-.gradient-border::before {
-  content: "";
-  position: absolute;
-  inset: -2px;
-  border-radius: inherit;
-  background: var(--cyan-pink-gradient);
-  z-index: -1;
-}
-
 .start-btn {
-  background: var(--site-bg);
-  color: var(--standard-pink);
-  font-weight: bold;
-  padding: 0.75rem 1rem;
-  margin-top: 3rem;
-  font-size: 1.50rem;
-  border-radius: 0.5rem;
-  border: none;
-  cursor: pointer;
-  transition: var(--site-transition);
+    background: var(--site-bg);
+    color: var(--standard-pink);
+    font-weight: bold;
+    padding: 0.75rem 1rem;
+    margin-top: 3rem;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: var(--site-transition);
 }
 
 .start-btn span {
@@ -122,7 +107,7 @@
 
 .footer-link-cyan,
 .footer-link-pink {
-    font-size: 1.30rem;
+    font-size: 1.3rem;
     font-weight: bold;
     transition: var(--site-transition);
     min-width: 6rem;
@@ -153,5 +138,5 @@
 .home-footer-container span {
     color: var(--standard-white);
     text-align: center;
-    font-size: 1.30rem;
+    font-size: 1.3rem;
 }

@@ -1,34 +1,29 @@
 /* Mobile */
-@media (max-width: 640px) {
+@media (width <= 640px) {
     :root {
-
     }
 }
 
 /* Tablets */
-@media (min-width: 641px) {
+@media (width >= 641px) {
     :root {
-
     }
 }
 
 /* Small Laptops */
-@media (min-width: 1024px) {
+@media (width >= 1024px) {
     :root {
-
     }
 }
 
-/* Desktop*/
-@media (min-width: 1280px) {
+/* Desktop */
+@media (width >= 1280px) {
     :root {
-
     }
 }
 
 /* Big Desktops */
-@media (min-width: 2560px) {
+@media (width >= 2560px) {
     :root {
-
     }
 }
