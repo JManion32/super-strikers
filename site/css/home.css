@@ -34,11 +34,14 @@
     color: var(--standard-pink);
 }
 
-.name-warning {
+.name-error {
     color: var(--danger-red);
     font-weight: bold;
     margin-top: 1.25rem;
     margin-bottom: 0.45rem;
+}
+
+.hide-error {
     visibility: hidden;
 }
 
@@ -92,6 +95,11 @@
     border: none;
     cursor: pointer;
     transition: var(--site-transition);
+}
+
+.btn-disabled {
+    opacity: 0.5 !important;
+    pointer-events: none !important;
 }
 
 .start-btn span {

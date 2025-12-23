@@ -24,7 +24,7 @@ function normalize(nickname: string): string {
 /**
  * Check if the normalized name contains any banned word as a substring
  */
-export function checkName(nickname: string): boolean {
+export function badName(nickname: string): boolean {
     const cleaned = normalize(nickname);
 
     for (const word of allBannedWords) {

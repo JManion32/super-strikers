@@ -1,10 +1,33 @@
 import { useState } from 'react';
+// @ts-ignore
+import { useNavigate } from 'react-router-dom';
 
 import '../css/home.css';
-//import { checkName } from '../utils/checkName.ts'
+import { badName } from '../utils/checkName.ts'
 
-function App() {
+function Home() {
+    const navigate = useNavigate();
+
     const [nickname, setNickname] = useState('');
+    const [isBadName, setIsBadName] = useState(false);
+    const [canCustomMatch, setCanCustomMatch] = useState(true);
+
+
+    function start(type: string) {
+        if (badName(nickname)) {
+            setNickname("");
+            setCanCustomMatch(true);
+            setIsBadName(true);
+            return;
+        }
+        setIsBadName(false);
+        if (type === "online") {
+            setCanCustomMatch(false);
+        }
+        else if (type === "custom") {
+            navigate("/CustomMatch");
+        }
+    }
 
     return (
         <>
@@ -14,24 +37,25 @@ function App() {
                         <span className="site-title-1">Super</span>{' '}
                         <span className="site-title-2">Strikers</span>
                     </h1>
-                    <p className="name-warning" id="name-warning">
-                        Please choose a clean nickname!
+                    <p className={`name-error ${isBadName ? "" : "hide-error"}`}>
+                        Please choose a clean username!
                     </p>
                     <input
                         type="text"
                         maxLength={24}
+                        id="name-input"
                         className="name-input"
-                        placeholder="Enter Nickname"
-                        title="Enter your nickname"
+                        placeholder="Enter Username"
+                        title="Enter your username"
                         value={nickname}
                         onChange={(e) => setNickname(e.target.value)}
                     />
                     <div className="start-btns-container">
-                        <button className="start-btn gradient-border">
+                        <button className={`start-btn gradient-border ${nickname == "" ? "btn-disabled" : ""}`} id="find-match-btn" onClick={() => start("online")}>
                             <span className="gradient-text">Find Match</span>
                         </button>
-                        <button className="start-btn gradient-border">
-                            <span className="gradient-text">Custom Match</span>
+                        <button className={`start-btn gradient-border ${!canCustomMatch || nickname == "" ? "btn-disabled" : ""}`}>
+                            <span className="gradient-text" id="custom-match-btn" onClick={() => start("custom")}>Custom Match</span>
                         </button>
                     </div>
                 </div>
@@ -55,4 +79,4 @@ function App() {
     );
 }
 
-export default App;
+export default Home;
