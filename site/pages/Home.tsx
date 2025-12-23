@@ -12,6 +12,12 @@ function Home() {
     const [isBadName, setIsBadName] = useState(false);
     const [canCustomMatch, setCanCustomMatch] = useState(true);
 
+    const [copied, setCopied] = useState(false);
+    const handleCopy = () => {
+        navigator.clipboard.writeText("https://superstrikers.io");
+        setCopied(true);
+        setTimeout(() => setCopied(false), 3000);
+    };
 
     function start(type: string) {
         if (badName(nickname)) {
@@ -63,7 +69,9 @@ function Home() {
             <div className="home-footer-container">
                 <a className="footer-link-cyan">What's New?</a>
                 <span>|</span>
-                <a className="footer-link-pink">Share</a>
+                <a className="footer-link-pink" onClick={handleCopy}>
+                    {copied ? "Copied!" : "Share"}
+                </a>
                 <span>|</span>
                 <a
                     className="footer-link-cyan"
