@@ -14,7 +14,7 @@
 
 .home-footer-container {
     position: absolute;
-    bottom: 1.25rem;
+    bottom: 1.50rem;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -39,6 +39,7 @@
     font-weight: bold;
     margin-top: 1.25rem;
     margin-bottom: 0.45rem;
+    visibility: hidden;
 }
 
 .name-input {

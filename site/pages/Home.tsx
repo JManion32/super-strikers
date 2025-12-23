@@ -1,6 +1,10 @@
+import { useState } from "react";
+
 import '../css/home.css'
+import '../utils/checkName.ts'
 
 function App() {
+    //const [nickname] = useState("");
 
   return (
     <>
@@ -9,6 +13,7 @@ function App() {
                 <h1 className="site-title"><span className="site-title-1">Super</span> <span className="site-title-2">Strikers</span></h1>
                 <p
                     className="name-warning"
+                    id="name-warning"
                 >
                     Please choose a clean nickname!
                 </p>
@@ -44,7 +49,13 @@ function App() {
             <span>|</span>
             <a className="footer-link-pink">Share</a>
             <span>|</span>
-            <a className="footer-link-cyan">Feature Request</a>
+            <a
+                className="footer-link-cyan"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSc8LkUPkPTEdItDLcJA9tmhBx_pZ7p8q2hN1V7VMeRarb5wbw/viewform?usp=dialog>Feature Request"
+                target="_blank"
+            >
+                Feature Request
+            </a>
             <span>|</span>
             <a className="footer-link-pink">Privacy Policy</a>
         </div>
