@@ -56,7 +56,7 @@ function CustomMatch() {
                         <span className="custom-title-2">Match</span>
                     </h1>
                     <hr className="content-spacer"/>
-                    <div className="join-custom-container">
+                    <div className={`join-custom-container ${ isCreating ? "disabled" : ""}`}>
                         <p className="join-custom-p">
                             Join Custom Match:
                         </p>
@@ -64,7 +64,7 @@ function CustomMatch() {
                             type="text"
                             maxLength={6}
                             autoComplete="off"
-                            className={`code-input`}
+                            className={`code-input ${ isJoining ? "disabled" : ""}`}
                             placeholder="Enter code"
                             title="Enter code"
                             value={joinCode}
@@ -75,17 +75,17 @@ function CustomMatch() {
                         </button>
                     </div>
                     <hr className="content-spacer"/>
-                    <div className="create-custom-container">
+                    <div className={`create-custom-container ${ isJoining ? "disabled" : ""}`}>
                         <h2>Create Custom Match</h2>
                         <p className="maps-desc">Choose a map to play on. If none are selected, it will be random.</p>
                         <div className="map-img-container">
                             {maps.map(({ name, img }) => (
                                 <img
-                                key={name}
-                                src={img}
-                                alt={`${name} map`}
-                                className={selectedMap === name ? "map-selected" : ""}
-                                onClick={() => selectMap(name)}
+                                    key={name}
+                                    src={img}
+                                    alt={`${name} map`}
+                                    className={`${selectedMap === name ? "map-selected" : ""} ${ isCreating ? "disabled" : ""}`}
+                                    onClick={() => selectMap(name)}
                                 />
                             ))}
                         </div>

@@ -13,6 +13,7 @@
     align-items: center;
     flex-grow: 1;
     padding-top: 4rem;
+    transition: var(--site-transition);
 }
 
 .home-btn {
@@ -151,7 +152,7 @@
 }
 
 .create-match-container {
-    margin-top: 2.5rem;
+    margin-top: 3rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
