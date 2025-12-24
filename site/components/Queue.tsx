@@ -1,4 +1,5 @@
 //import { useState } from 'react';
+import '../css/queue.css';
 
 function Queue() {
 

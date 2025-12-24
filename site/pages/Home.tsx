@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 import '../css/home.css';
 import Queue from '../components/Queue.tsx'
+import Popup from '../components/Popup.tsx'
 import { badName } from '../utils/checkName.ts'
 
 function Home() {
@@ -67,12 +68,12 @@ function Home() {
                     />
                     <div className="start-btns-container">
                         <button
-                            className={`start-btn gradient-btn ${nickname == "" ? "btn-disabled" : ""} ${isQueueing ? "cancel" : ""}`}
+                            className={`start-btn gradient-btn ${nickname == "" ? "gradient-btn-disabled" : ""} ${isQueueing ? "cancel" : ""}`}
                             id="find-match-btn"
                             onClick={() => {isQueueing ? start("online-cancel") : start("online-queue")}}>
                             <span>{isQueueing ? "Cancel" : "Find Match"}</span>
                         </button>
-                        <button className={`start-btn gradient-btn ${!canCustomMatch || nickname == "" ? "btn-disabled" : ""}`} onClick={() => start("custom")}>
+                        <button className={`start-btn gradient-btn ${!canCustomMatch || nickname == "" ? "gradient-btn-disabled" : ""}`} onClick={() => start("custom")}>
                             <span>Custom Match</span>
                         </button>
                     </div>

@@ -1,8 +1,5 @@
 @import url('colors.css');
 @import url('scaling.css');
-@import url('home.css');
-@import url('custom-match.css');
-@import url('queue.css');
 
 :root {
     font-family: var(--site-font);
@@ -76,14 +73,14 @@ html, body {
     opacity: 0.35;
 }
 
-.btn-disabled {
+.gradient-btn-disabled {
     pointer-events: none;
 }
 
-.btn-disabled::before {
+.gradient-btn-disabled::before {
     opacity: 0.35;
 }
 
-.btn-disabled span {
+.gradient-btn-disabled span {
     filter: saturate(40%) brightness(70%);
 }

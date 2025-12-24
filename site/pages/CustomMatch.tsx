@@ -70,7 +70,7 @@ function CustomMatch() {
                             value={joinCode}
                             onChange={(e) => setJoinCode(e.target.value)}
                         />
-                        <button className="join-btn gradient-btn" onClick={ ()=> setIsJoining(!isJoining)}>
+                        <button className={`join-btn gradient-btn ${joinCode.length === 6 ? '' : 'gradient-btn-disabled'}`} onClick={ ()=> setIsJoining(!isJoining)}>
                             <span>{isJoining ? "Cancel" : "Join"}</span>
                         </button>
                     </div>
