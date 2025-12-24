@@ -1,17 +1,30 @@
 .popup-container {
-    opacity: 0.5;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: var(--site-transition);
+
+    z-index: 9999;
 }
 
-.popup {
-    height: 72rem;
-    width: 36rem;
 
-    background: red;
+.popup {
+    position: absolute;
+
+    height: 50rem;
+    width: 50rem;
+    background: var(--secondary-bg);
+    color: var(--standard-white);
+
     border-radius: 1rem;
+    padding: 1rem;
+}
+
+.popup-hidden {
+    display: none;
 }
 
 @keyframes slide-up {

@@ -1,18 +1,18 @@
 import Popup from './Popup.tsx'
 import '../css/home.css';
 
-function About() {
+function WhatsNew() {
 
     return (
     <>
         <Popup 
             canOutsideClick={true}
-            trigger={<a className="footer-link-pink">About</a>}
+            trigger={<a className="footer-link-cyan">What's New?</a>}
         >
-            <h1>About</h1>
+            <h1>What's New?</h1>
         </Popup>
     </>
   );
 }
 
-export default About;
+export default WhatsNew;

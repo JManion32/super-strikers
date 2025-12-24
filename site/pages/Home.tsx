@@ -3,9 +3,11 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import '../css/home.css';
-import Queue from '../components/Queue.tsx'
-import Popup from '../components/Popup.tsx'
-import { badName } from '../utils/checkName.ts'
+import About from '../components/About.tsx';
+import WhatsNew from '../components/WhatsNew.tsx';
+import PrivacyPolicy from '../components/PrivacyPolicy.tsx';
+import Queue from '../components/Queue.tsx';
+import { badName } from '../utils/checkName.ts';
 
 function Home() {
     const navigate = useNavigate();
@@ -80,9 +82,9 @@ function Home() {
                 </div>
             </div>
             <div className="home-footer-container">
-                <a className="footer-link-pink">About</a>
+                <About/>
                 <span>|</span>
-                <a className="footer-link-cyan">What's New?</a>
+                <WhatsNew/>
                 <span>|</span>
                 <a className="footer-link-pink" onClick={handleCopy}>
                     {copied ? "Copied!" : "Share"}
@@ -96,7 +98,7 @@ function Home() {
                     Feature Request
                 </a>
                 <span>|</span>
-                <a className="footer-link-pink">Privacy Policy</a>
+                <PrivacyPolicy/>
             </div>
         </>
     );
