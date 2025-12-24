@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 // @ts-ignore
 import { useNavigate } from 'react-router-dom';
 
@@ -12,7 +12,6 @@ import { badName } from '../utils/checkName.ts';
 function Home() {
     const navigate = useNavigate();
 
-    const [nickname, setNickname] = useState('');
     const [isQueueing, setIsQueueing] = useState(false);
     const [isBadName, setIsBadName] = useState(false);
     const [canCustomMatch, setCanCustomMatch] = useState(true);
@@ -24,9 +23,17 @@ function Home() {
         setTimeout(() => setCopied(false), 3000);
     };
 
+    const [name, setName] = useState(() => {
+        return localStorage.getItem("savedName") ?? "";
+    });
+
+    useEffect(() => {
+        localStorage.setItem("savedName", name);
+    }, [name]);
+
     function start(type: string) {
-        if (badName(nickname)) {
-            setNickname("");
+        if (badName(name)) {
+            setName("");
             setCanCustomMatch(true);
             setIsBadName(true);
             return;
@@ -37,10 +44,12 @@ function Home() {
             setIsQueueing(true);
         }
         else if (type === "online-cancel") {
+            localStorage.setItem("savedName", name);
             setCanCustomMatch(true);
             setIsQueueing(false);
         }
         else if (type === "custom") {
+            localStorage.setItem("savedName", name);
             navigate("/CustomMatch");
         }
     }
@@ -65,17 +74,17 @@ function Home() {
                         className={`name-input ${isQueueing ? "input-disabled" : ""}`}
                         placeholder="Enter Username"
                         title="Enter your username"
-                        value={nickname}
-                        onChange={(e) => setNickname(e.target.value)}
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
                     />
                     <div className="start-btns-container">
                         <button
-                            className={`start-btn gradient-btn ${nickname == "" ? "gradient-btn-disabled" : ""} ${isQueueing ? "cancel" : ""}`}
+                            className={`start-btn gradient-btn ${name == "" ? "gradient-btn-disabled" : ""} ${isQueueing ? "cancel" : ""}`}
                             id="find-match-btn"
                             onClick={() => {isQueueing ? start("online-cancel") : start("online-queue")}}>
                             <span>{isQueueing ? "Cancel" : "Find Match"}</span>
                         </button>
-                        <button className={`start-btn gradient-btn ${!canCustomMatch || nickname == "" ? "gradient-btn-disabled" : ""}`} onClick={() => start("custom")}>
+                        <button className={`start-btn gradient-btn ${!canCustomMatch || name == "" ? "gradient-btn-disabled" : ""}`} onClick={() => start("custom")}>
                             <span>Custom Match</span>
                         </button>
                     </div>
