@@ -3,8 +3,10 @@
 :root {
     --site-font: arial, sans-serif;
     --site-transition: 0.2s;
+
     --site-bg: #141414;
     --secondary-bg: #1a1a1a;
+    --hover-map-img: #cccccc90;
     --danger-red: #f00;
     --standard-cyan: #00fff0;
     --standard-cyan-hover: #80fff7;
@@ -13,4 +15,5 @@
     --cyan-pink-gradient: linear-gradient(to right, var(--standard-cyan), var(--standard-pink));
     --standard-white: #fff;
     --standard-black: #000;
+    --standard-light-gray: #333333;
 }

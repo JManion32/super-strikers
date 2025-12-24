@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import '../css/home.css';
+import Queue from '../components/Queue.tsx'
 import { badName } from '../utils/checkName.ts'
 
 function Home() {
@@ -44,6 +45,7 @@ function Home() {
     return (
         <>
             <div className="home-page-container">
+                {isQueueing && <Queue />}
                 <div className="home-content-container">
                     <h1 className="site-title">
                         <span className="site-title-1">Super</span>{' '}
@@ -70,8 +72,8 @@ function Home() {
                             onClick={() => {isQueueing ? start("online-cancel") : start("online-queue")}}>
                             <span className="gradient-text">{isQueueing ? "Cancel" : "Find Match"}</span>
                         </button>
-                        <button className={`start-btn gradient-border ${!canCustomMatch || nickname == "" ? "btn-disabled" : ""}`}>
-                            <span className="gradient-text" id="custom-match-btn" onClick={() => start("custom")}>Custom Match</span>
+                        <button className={`start-btn gradient-border ${!canCustomMatch || nickname == "" ? "btn-disabled" : ""}`} onClick={() => start("custom")}>
+                            <span className="gradient-text" id="custom-match-btn">Custom Match</span>
                         </button>
                     </div>
                 </div>

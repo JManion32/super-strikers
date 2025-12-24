@@ -83,6 +83,19 @@
     z-index: -1;
 }
 
+.start-btn {
+    background: var(--site-bg);
+    color: var(--standard-pink);
+    font-weight: bold;
+    padding: 0.75rem 1rem;
+    margin-top: 3rem;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: var(--site-transition);
+}
+
 .start-btn span {
     background-image: var(--cyan-pink-gradient);
     color: transparent;
@@ -98,19 +111,6 @@
     margin-top: 1rem;
     display: flex;
     flex-direction: column;
-}
-
-.start-btn {
-    background: var(--site-bg);
-    color: var(--standard-pink);
-    font-weight: bold;
-    padding: 0.75rem 1rem;
-    margin-top: 3rem;
-    font-size: 1.5rem;
-    border-radius: 0.5rem;
-    border: none;
-    cursor: pointer;
-    transition: var(--site-transition);
 }
 
 .btn-disabled {
@@ -132,6 +132,7 @@
     transition: var(--site-transition);
     min-width: 6rem;
     text-align: center;
+    text-decoration: none;
 }
 
 .footer-link-cyan {
