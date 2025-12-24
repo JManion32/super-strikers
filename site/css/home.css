@@ -68,61 +68,20 @@
     background: var(--secondary-bg);
 }
 
-.gradient-border {
-    position: relative;
-    border-radius: 8px;
-    background: var(--secondary-bg);
-}
-
-.gradient-border::before {
-    content: '';
-    position: absolute;
-    inset: -2px;
-    border-radius: inherit;
-    background: var(--cyan-pink-gradient);
-    z-index: -1;
-}
-
 .start-btn {
-    background: var(--site-bg);
-    color: var(--standard-pink);
     font-weight: bold;
     padding: 0.75rem 1rem;
     margin-top: 3rem;
     font-size: 1.5rem;
     border-radius: 0.5rem;
-    border: none;
     cursor: pointer;
     transition: var(--site-transition);
-}
-
-.start-btn span {
-    background-image: var(--cyan-pink-gradient);
-    color: transparent;
-    background-clip: text;
-    transition: var(--site-transition);
-}
-
-.start-btn:hover {
-    background: var(--secondary-bg);
 }
 
 .start-btns-container {
     margin-top: 1rem;
     display: flex;
     flex-direction: column;
-}
-
-.btn-disabled {
-    pointer-events: none;
-}
-
-.btn-disabled::before {
-    opacity: 0.35;
-}
-
-.btn-disabled span {
-    filter: saturate(40%) brightness(70%);
 }
 
 .footer-link-cyan,

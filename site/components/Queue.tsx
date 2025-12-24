@@ -6,7 +6,7 @@ function Queue() {
     return (
         <>
             <div className="queue-container">
-                <p>Hello world!</p>
+                <p>Queueing for online match...</p>
             </div>
         </>
     );

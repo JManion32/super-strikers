@@ -23,3 +23,62 @@ html, body {
   display: flex;
   flex-direction: column;
 }
+
+.gradient-btn {
+    position: relative;
+    border-radius: 8px;
+
+    background: var(--site-bg);
+    border: none;
+    cursor: pointer;
+}
+
+.gradient-btn:hover {
+    background: var(--secondary-bg);
+}
+
+.gradient-btn:hover::after {
+    opacity: 0.85;
+}
+
+
+.gradient-btn::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    background: var(--cyan-pink-gradient);
+    z-index: -1;
+}
+
+.gradient-btn::after {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border-radius: inherit;
+    background: var(--cyan-pink-gradient);
+    filter: blur(8px);
+    opacity: 0;
+    z-index: -2;
+    transition: opacity var(--site-transition);
+    pointer-events: none;
+}
+
+.gradient-btn span {
+    background-image: var(--cyan-pink-gradient);
+    color: transparent;
+    background-clip: text;
+    transition: var(--site-transition);
+}
+
+.btn-disabled {
+    pointer-events: none;
+}
+
+.btn-disabled::before {
+    opacity: 0.35;
+}
+
+.btn-disabled span {
+    filter: saturate(40%) brightness(70%);
+}

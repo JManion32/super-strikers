@@ -67,18 +67,20 @@ function Home() {
                     />
                     <div className="start-btns-container">
                         <button
-                            className={`start-btn gradient-border ${nickname == "" ? "btn-disabled" : ""} ${isQueueing ? "cancel" : ""}`}
+                            className={`start-btn gradient-btn ${nickname == "" ? "btn-disabled" : ""} ${isQueueing ? "cancel" : ""}`}
                             id="find-match-btn"
                             onClick={() => {isQueueing ? start("online-cancel") : start("online-queue")}}>
-                            <span className="gradient-text">{isQueueing ? "Cancel" : "Find Match"}</span>
+                            <span>{isQueueing ? "Cancel" : "Find Match"}</span>
                         </button>
-                        <button className={`start-btn gradient-border ${!canCustomMatch || nickname == "" ? "btn-disabled" : ""}`} onClick={() => start("custom")}>
-                            <span className="gradient-text" id="custom-match-btn">Custom Match</span>
+                        <button className={`start-btn gradient-btn ${!canCustomMatch || nickname == "" ? "btn-disabled" : ""}`} onClick={() => start("custom")}>
+                            <span>Custom Match</span>
                         </button>
                     </div>
                 </div>
             </div>
             <div className="home-footer-container">
+                <a className="footer-link-pink">About</a>
+                <span>|</span>
                 <a className="footer-link-cyan">What's New?</a>
                 <span>|</span>
                 <a className="footer-link-pink" onClick={handleCopy}>

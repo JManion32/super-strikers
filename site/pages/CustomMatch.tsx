@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import '../css/custom-match.css';
+import Queue from '../components/Queue.tsx'
 // @ts-ignore
 import { useNavigate } from 'react-router-dom';
 
@@ -16,7 +17,29 @@ import warm_mode from '../assets/warm_mode.png';
 
 function CustomMatch() {
     const navigate = useNavigate();
-    const [customCode, setCustomCode] = useState('');
+    const [joinCode, setJoinCode] = useState('');
+    const [createCode, setCreateCode] = useState('');
+    const [selectedMap, setSelectedMap] = useState('Random');
+
+    const [isJoining, setIsJoining] = useState(false);
+    const [isCreating, setIsCreating] = useState(false);
+
+    const maps = [
+        { name: "Neon", img: neon_mode },
+        { name: "Festive", img: festive_mode },
+        { name: "Forest", img: forest_mode },
+        { name: "Galaxy", img: galaxy_mode },
+        { name: "Halloween", img: halloween_mode },
+        { name: "Monochrome", img: monochrome_mode },
+        { name: "Gilded", img: premium_mode },
+        { name: "Retro", img: retro_mode },
+        { name: "Voltage", img: voltage_mode },
+        { name: "Warm", img: warm_mode },
+    ];
+
+    function selectMap(mapName: string) {
+        setSelectedMap(prev => (prev === mapName ? "Random" : mapName));
+    }
 
     function goHome() {
         navigate('/');
@@ -24,6 +47,7 @@ function CustomMatch() {
 
     return (
         <>
+            {(isJoining || isCreating) && <Queue />}
             <button className="home-btn" onClick={goHome}>⬅ Home</button>
             <div className="custom-match-page-container">
                 <div className="custom-match-content-container">
@@ -40,15 +64,14 @@ function CustomMatch() {
                             type="text"
                             maxLength={6}
                             autoComplete="off"
-                            id="name-input"
                             className={`code-input`}
                             placeholder="Enter code"
                             title="Enter code"
-                            value={customCode}
-                            onChange={(e) => setCustomCode(e.target.value)}
+                            value={joinCode}
+                            onChange={(e) => setJoinCode(e.target.value)}
                         />
-                        <button className="join-btn">
-                            Join
+                        <button className="join-btn gradient-btn" onClick={ ()=> setIsJoining(!isJoining)}>
+                            <span>{isJoining ? "Cancel" : "Join"}</span>
                         </button>
                     </div>
                     <hr className="content-spacer"/>
@@ -56,16 +79,41 @@ function CustomMatch() {
                         <h2>Create Custom Match</h2>
                         <p className="maps-desc">Choose a map to play on. If none are selected, it will be random.</p>
                         <div className="map-img-container">
-                            <img src={neon_mode}/>
-                            <img src={festive_mode}/>
-                            <img src={forest_mode}/>
-                            <img src={galaxy_mode}/>
-                            <img src={halloween_mode}/>
-                            <img src={monochrome_mode}/>
-                            <img src={premium_mode}/>
-                            <img src={retro_mode}/>
-                            <img src={voltage_mode}/>
-                            <img src={warm_mode}/>
+                            {maps.map(({ name, img }) => (
+                                <img
+                                key={name}
+                                src={img}
+                                alt={`${name} map`}
+                                className={selectedMap === name ? "map-selected" : ""}
+                                onClick={() => selectMap(name)}
+                                />
+                            ))}
+                        </div>
+                        <div className="create-match-container">
+                            <div className="selected-map-container">
+                                <p className="selected-map-p">
+                                    Selected Map:
+                                </p>
+                                <input
+                                    type="text"
+                                    maxLength={6}
+                                    autoComplete="off"
+                                    id="name-input"
+                                    className="selected-map-display"
+                                    value={selectedMap}
+                                />
+                            </div>
+                            <button className="create-match-btn gradient-btn"  onClick={ ()=> setIsCreating(!isCreating)}>
+                                <span>{isCreating ? "Cancel" : "Create"}</span>
+                            </button>
+                            <input
+                                type="text"
+                                maxLength={6}
+                                autoComplete="off"
+                                id="name-input"
+                                className="match-code-display"
+                                value={createCode}
+                            />
                         </div>
                     </div>
                 </div>
