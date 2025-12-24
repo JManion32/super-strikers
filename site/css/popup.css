@@ -10,7 +10,6 @@
     z-index: 9999;
 }
 
-
 .popup {
     position: absolute;
 
@@ -20,7 +19,7 @@
     color: var(--standard-white);
 
     border-radius: 1rem;
-    padding: 1rem;
+    padding: 2rem;
 }
 
 .popup-hidden {

@@ -48,7 +48,7 @@ function CustomMatch() {
     return (
         <>
             {(isJoining || isCreating) && <Queue />}
-            <button className="home-btn" onClick={goHome}>⬅ Home</button>
+            <button className={`home-btn ${isJoining || isCreating ? 'disabled' : ''}`} onClick={goHome}>⬅ Home</button>
             <div className="custom-match-page-container">
                 <div className="custom-match-content-container">
                     <h1 className="custom-title">
