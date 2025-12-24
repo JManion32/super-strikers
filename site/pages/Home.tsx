@@ -9,6 +9,7 @@ function Home() {
     const navigate = useNavigate();
 
     const [nickname, setNickname] = useState('');
+    const [isQueueing, setIsQueueing] = useState(false);
     const [isBadName, setIsBadName] = useState(false);
     const [canCustomMatch, setCanCustomMatch] = useState(true);
 
@@ -27,8 +28,13 @@ function Home() {
             return;
         }
         setIsBadName(false);
-        if (type === "online") {
+        if (type === "online-queue") {
             setCanCustomMatch(false);
+            setIsQueueing(true);
+        }
+        else if (type === "online-cancel") {
+            setCanCustomMatch(true);
+            setIsQueueing(false);
         }
         else if (type === "custom") {
             navigate("/CustomMatch");
@@ -49,16 +55,20 @@ function Home() {
                     <input
                         type="text"
                         maxLength={24}
+                        autoComplete="off"
                         id="name-input"
-                        className="name-input"
+                        className={`name-input ${isQueueing ? "input-disabled" : ""}`}
                         placeholder="Enter Username"
                         title="Enter your username"
                         value={nickname}
                         onChange={(e) => setNickname(e.target.value)}
                     />
                     <div className="start-btns-container">
-                        <button className={`start-btn gradient-border ${nickname == "" ? "btn-disabled" : ""}`} id="find-match-btn" onClick={() => start("online")}>
-                            <span className="gradient-text">Find Match</span>
+                        <button
+                            className={`start-btn gradient-border ${nickname == "" ? "btn-disabled" : ""} ${isQueueing ? "cancel" : ""}`}
+                            id="find-match-btn"
+                            onClick={() => {isQueueing ? start("online-cancel") : start("online-queue")}}>
+                            <span className="gradient-text">{isQueueing ? "Cancel" : "Find Match"}</span>
                         </button>
                         <button className={`start-btn gradient-border ${!canCustomMatch || nickname == "" ? "btn-disabled" : ""}`}>
                             <span className="gradient-text" id="custom-match-btn" onClick={() => start("custom")}>Custom Match</span>

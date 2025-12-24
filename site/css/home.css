@@ -57,6 +57,11 @@
     transition: var(--site-transition);
 }
 
+.input-disabled {
+    opacity: 0.7 ;
+    pointer-events: none;
+}
+
 .name-input:focus,
 .name-input:focus-visible {
     outline: 1px var(--standard-cyan);
@@ -76,6 +81,17 @@
     border-radius: inherit;
     background: var(--cyan-pink-gradient);
     z-index: -1;
+}
+
+.start-btn span {
+    background-image: var(--cyan-pink-gradient);
+    color: transparent;
+    background-clip: text;
+    transition: var(--site-transition);
+}
+
+.start-btn:hover {
+    background: var(--secondary-bg);
 }
 
 .start-btns-container {
@@ -98,19 +114,15 @@
 }
 
 .btn-disabled {
-    opacity: 0.5 !important;
-    pointer-events: none !important;
+    pointer-events: none;
 }
 
-.start-btn span {
-    background-image: var(--cyan-pink-gradient);
-    color: transparent;
-    background-clip: text;
-    transition: var(--site-transition);
+.btn-disabled::before {
+    opacity: 0.35;
 }
 
-.start-btn:hover {
-    background: var(--secondary-bg);
+.btn-disabled span {
+    filter: saturate(40%) brightness(70%);
 }
 
 .footer-link-cyan,
