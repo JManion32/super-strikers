@@ -1,0 +1,47 @@
+.popup-container {
+    opacity: 0.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--site-transition);
+}
+
+.popup {
+    height: 72rem;
+    width: 36rem;
+
+    background: red;
+    border-radius: 1rem;
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.slide-up {
+    animation: slide-up 0.4s ease-out;
+}
+
+@keyframes slide-down {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+}
+
+.slide-down {
+    animation: slide-down 0.3s ease-in forwards;
+}
