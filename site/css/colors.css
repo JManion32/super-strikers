@@ -16,4 +16,7 @@
     --standard-white: #fff;
     --standard-black: #000;
     --standard-light-gray: #333333;
+
+    --standard-anchor: #7799ff;
+    --standard-anchor-hover: #94afff; 
 }
