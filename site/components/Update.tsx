@@ -7,7 +7,7 @@ type Props = {
     date: string;
 };
 
-function Update({title, content, date} : Props) {
+function Update({ title, content, date }: Props) {
     return (
         <>
             <div className="update-container">

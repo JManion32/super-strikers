@@ -20,10 +20,10 @@
     position: absolute;
     left: 1rem;
     top: 1rem;
-    padding: 0.50rem;
+    padding: 0.5rem;
     font-size: 1.25rem;
     font-weight: bold;
-    border-radius: 0.40rem;
+    border-radius: 0.4rem;
     background: var(--secondary-bg);
     border: 1px solid var(--standard-light-gray);
     color: var(--standard-white);
@@ -72,7 +72,7 @@
 
 .code-input {
     width: 20rem;
-    padding: 0.50rem;
+    padding: 0.5rem;
     border-radius: 0.5rem;
     font-size: 1.25rem;
     font-weight: bold;
@@ -90,12 +90,12 @@
 
 .join-btn {
     margin-left: auto;
-    padding: 0.50rem;
+    padding: 0.5rem;
     font-size: 1.25rem;
     font-weight: bold;
     cursor: pointer;
     width: 6rem;
-    border-radius: 0.40rem;
+    border-radius: 0.4rem;
     color: var(--standard-pink);
     transition: var(--site-transition);
 }
@@ -137,18 +137,18 @@
 
 .map-img-container img:hover {
     scale: 1.15;
-    box-shadow: 0 0 1.50rem var(--hover-map-img);
+    box-shadow: 0 0 1.5rem var(--hover-map-img);
     cursor: pointer;
 }
 
 .map-selected {
     scale: 1.15;
-    box-shadow: 0 0 1.50rem var(--standard-cyan);
+    box-shadow: 0 0 1.5rem var(--standard-cyan);
 }
 
 .map-selected:hover {
     scale: 1.15 !important;
-    box-shadow: 0 0 1.50rem var(--standard-cyan) !important;
+    box-shadow: 0 0 1.5rem var(--standard-cyan) !important;
 }
 
 .create-match-container {
@@ -178,11 +178,11 @@
 }
 
 .create-match-btn {
-    padding: 0.50rem 1rem;
+    padding: 0.5rem 1rem;
     font-size: 1.25rem;
     font-weight: bold;
     cursor: pointer;
-    border-radius: 0.50rem;
+    border-radius: 0.5rem;
     width: 8rem;
     transition: var(--site-transition);
 }
@@ -192,7 +192,7 @@
     width: 12rem;
     text-align: center;
     font-size: 1.25rem;
-    border-radius: 0.50rem;
+    border-radius: 0.5rem;
     font-weight: bold;
     background: var(--site-bg);
     color: var(--standard-white);

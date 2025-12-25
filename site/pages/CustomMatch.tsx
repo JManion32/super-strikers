@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import '../css/custom-match.css';
-import Queue from '../components/Queue.tsx'
+import Queue from '../components/Queue.tsx';
 // @ts-ignore
 import { useNavigate } from 'react-router-dom';
 
@@ -25,20 +25,20 @@ function CustomMatch() {
     const [isCreating, setIsCreating] = useState(false);
 
     const maps = [
-        { name: "Neon", img: neon_mode },
-        { name: "Festive", img: festive_mode },
-        { name: "Forest", img: forest_mode },
-        { name: "Galaxy", img: galaxy_mode },
-        { name: "Halloween", img: halloween_mode },
-        { name: "Monochrome", img: monochrome_mode },
-        { name: "Gilded", img: premium_mode },
-        { name: "Retro", img: retro_mode },
-        { name: "Voltage", img: voltage_mode },
-        { name: "Warm", img: warm_mode },
+        { name: 'Neon', img: neon_mode },
+        { name: 'Festive', img: festive_mode },
+        { name: 'Forest', img: forest_mode },
+        { name: 'Galaxy', img: galaxy_mode },
+        { name: 'Halloween', img: halloween_mode },
+        { name: 'Monochrome', img: monochrome_mode },
+        { name: 'Gilded', img: premium_mode },
+        { name: 'Retro', img: retro_mode },
+        { name: 'Voltage', img: voltage_mode },
+        { name: 'Warm', img: warm_mode },
     ];
 
     function selectMap(mapName: string) {
-        setSelectedMap(prev => (prev === mapName ? "Random" : mapName));
+        setSelectedMap((prev) => (prev === mapName ? 'Random' : mapName));
     }
 
     function goHome() {
@@ -48,52 +48,58 @@ function CustomMatch() {
     return (
         <>
             {(isJoining || isCreating) && <Queue />}
-            <button className={`home-btn ${isJoining || isCreating ? 'disabled' : ''}`} onClick={goHome}>⬅ Home</button>
+            <button
+                className={`home-btn ${isJoining || isCreating ? 'disabled' : ''}`}
+                onClick={goHome}
+            >
+                ⬅ Home
+            </button>
             <div className="custom-match-page-container">
                 <div className="custom-match-content-container">
                     <h1 className="custom-title">
                         <span className="custom-title-1">Custom</span>{' '}
                         <span className="custom-title-2">Match</span>
                     </h1>
-                    <hr className="content-spacer"/>
-                    <div className={`join-custom-container ${ isCreating ? "disabled" : ""}`}>
-                        <p className="join-custom-p">
-                            Join Custom Match:
-                        </p>
+                    <hr className="content-spacer" />
+                    <div className={`join-custom-container ${isCreating ? 'disabled' : ''}`}>
+                        <p className="join-custom-p">Join Custom Match:</p>
                         <input
                             type="text"
                             maxLength={6}
                             autoComplete="off"
-                            className={`code-input ${ isJoining ? "disabled" : ""}`}
+                            className={`code-input ${isJoining ? 'disabled' : ''}`}
                             placeholder="Enter code"
                             title="Enter code"
                             value={joinCode}
                             onChange={(e) => setJoinCode(e.target.value)}
                         />
-                        <button className={`join-btn gradient-btn ${joinCode.length === 6 ? '' : 'gradient-btn-disabled'}`} onClick={ ()=> setIsJoining(!isJoining)}>
-                            <span>{isJoining ? "Cancel" : "Join"}</span>
+                        <button
+                            className={`join-btn gradient-btn ${joinCode.length === 6 ? '' : 'gradient-btn-disabled'}`}
+                            onClick={() => setIsJoining(!isJoining)}
+                        >
+                            <span>{isJoining ? 'Cancel' : 'Join'}</span>
                         </button>
                     </div>
-                    <hr className="content-spacer"/>
-                    <div className={`create-custom-container ${ isJoining ? "disabled" : ""}`}>
+                    <hr className="content-spacer" />
+                    <div className={`create-custom-container ${isJoining ? 'disabled' : ''}`}>
                         <h2>Create Custom Match</h2>
-                        <p className="maps-desc">Choose a map to play on. If none are selected, it will be random.</p>
+                        <p className="maps-desc">
+                            Choose a map to play on. If none are selected, it will be random.
+                        </p>
                         <div className="map-img-container">
                             {maps.map(({ name, img }) => (
                                 <img
                                     key={name}
                                     src={img}
                                     alt={`${name} map`}
-                                    className={`${selectedMap === name ? "map-selected" : ""} ${ isCreating ? "disabled" : ""}`}
+                                    className={`${selectedMap === name ? 'map-selected' : ''} ${isCreating ? 'disabled' : ''}`}
                                     onClick={() => selectMap(name)}
                                 />
                             ))}
                         </div>
                         <div className="create-match-container">
                             <div className="selected-map-container">
-                                <p className="selected-map-p">
-                                    Selected Map:
-                                </p>
+                                <p className="selected-map-p">Selected Map:</p>
                                 <input
                                     type="text"
                                     maxLength={6}
@@ -103,8 +109,11 @@ function CustomMatch() {
                                     value={selectedMap}
                                 />
                             </div>
-                            <button className="create-match-btn gradient-btn"  onClick={ ()=> setIsCreating(!isCreating)}>
-                                <span>{isCreating ? "Cancel" : "Create"}</span>
+                            <button
+                                className="create-match-btn gradient-btn"
+                                onClick={() => setIsCreating(!isCreating)}
+                            >
+                                <span>{isCreating ? 'Cancel' : 'Create'}</span>
                             </button>
                             <input
                                 type="text"

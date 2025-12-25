@@ -2,8 +2,6 @@
 import '../css/queue.css';
 
 function Queue() {
-
-
     return (
         <>
             <div className="queue-container">

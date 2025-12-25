@@ -19,39 +19,37 @@ function Home() {
 
     const [copied, setCopied] = useState(false);
     const handleCopy = () => {
-        navigator.clipboard.writeText("https://superstrikers.io");
+        navigator.clipboard.writeText('https://superstrikers.io');
         setCopied(true);
         setTimeout(() => setCopied(false), 3000);
     };
 
     const [name, setName] = useState(() => {
-        return localStorage.getItem("savedName") ?? "";
+        return localStorage.getItem('savedName') ?? '';
     });
 
     useEffect(() => {
-        localStorage.setItem("savedName", name);
+        localStorage.setItem('savedName', name);
     }, [name]);
 
     function start(type: string) {
         if (badName(name)) {
-            setName("");
+            setName('');
             setCanCustomMatch(true);
             setIsBadName(true);
             return;
         }
         setIsBadName(false);
-        if (type === "online-queue") {
+        if (type === 'online-queue') {
             setCanCustomMatch(false);
             setIsQueueing(true);
-        }
-        else if (type === "online-cancel") {
-            localStorage.setItem("savedName", name);
+        } else if (type === 'online-cancel') {
+            localStorage.setItem('savedName', name);
             setCanCustomMatch(true);
             setIsQueueing(false);
-        }
-        else if (type === "custom") {
-            localStorage.setItem("savedName", name);
-            navigate("/CustomMatch");
+        } else if (type === 'custom') {
+            localStorage.setItem('savedName', name);
+            navigate('/CustomMatch');
         }
     }
 
@@ -64,7 +62,7 @@ function Home() {
                         <span className="site-title-1">Super</span>{' '}
                         <span className="site-title-2">Strikers</span>
                     </h1>
-                    <p className={`name-error ${isBadName ? "" : "hide-error"}`}>
+                    <p className={`name-error ${isBadName ? '' : 'hide-error'}`}>
                         Please choose a clean username!
                     </p>
                     <input
@@ -72,7 +70,7 @@ function Home() {
                         maxLength={24}
                         autoComplete="off"
                         id="name-input"
-                        className={`name-input ${isQueueing ? "input-disabled" : ""}`}
+                        className={`name-input ${isQueueing ? 'input-disabled' : ''}`}
                         placeholder="Enter Username"
                         title="Enter your username"
                         value={name}
@@ -80,23 +78,29 @@ function Home() {
                     />
                     <div className="start-btns-container">
                         <button
-                            className={`start-btn gradient-btn ${name == "" ? "gradient-btn-disabled" : ""} ${isQueueing ? "cancel" : ""}`}
+                            className={`start-btn gradient-btn ${name == '' ? 'gradient-btn-disabled' : ''} ${isQueueing ? 'cancel' : ''}`}
                             id="find-match-btn"
-                            onClick={() => {isQueueing ? start("online-cancel") : start("online-queue")}}>
-                            <span>{isQueueing ? "Cancel" : "Find Match"}</span>
+                            onClick={() => {
+                                isQueueing ? start('online-cancel') : start('online-queue');
+                            }}
+                        >
+                            <span>{isQueueing ? 'Cancel' : 'Find Match'}</span>
                         </button>
-                        <button className={`start-btn gradient-btn ${!canCustomMatch || name == "" ? "gradient-btn-disabled" : ""}`} onClick={() => start("custom")}>
+                        <button
+                            className={`start-btn gradient-btn ${!canCustomMatch || name == '' ? 'gradient-btn-disabled' : ''}`}
+                            onClick={() => start('custom')}
+                        >
                             <span>Custom Match</span>
                         </button>
                     </div>
                 </div>
                 <div className="home-footer-container">
-                    <About/>
+                    <About />
                     <span>|</span>
-                    <WhatsNew/>
+                    <WhatsNew />
                     <span>|</span>
                     <a className="footer-link-pink" onClick={handleCopy}>
-                        {copied ? "Copied!" : "Share"}
+                        {copied ? 'Copied!' : 'Share'}
                     </a>
                     <span>|</span>
                     <a
@@ -107,7 +111,7 @@ function Home() {
                         Feature Request ↗
                     </a>
                     <span>|</span>
-                    <PrivacyPolicy/>
+                    <PrivacyPolicy />
                 </div>
             </div>
         </>

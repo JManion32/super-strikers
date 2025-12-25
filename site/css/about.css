@@ -17,13 +17,13 @@
     margin: 1rem 0 1rem 0;
     font-size: 4rem;
     text-align: center;
-    color: var(--standard-pink)
+    color: var(--standard-pink);
 }
 
 .about-container h3 {
     margin: 0;
     font-size: 2rem;
-    color: var(--standard-cyan)
+    color: var(--standard-cyan);
 }
 
 .about-container p {
@@ -35,7 +35,7 @@
     width: 10rem;
     font-size: 2rem;
     font-weight: bold;
-    padding: 0.50rem;
+    padding: 0.5rem;
     border-radius: 0.75rem;
     margin: auto 0 1rem 0;
     border: 2px solid var(--standard-light-gray);
