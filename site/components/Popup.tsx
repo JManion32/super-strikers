@@ -6,10 +6,11 @@ import '../css/popup.css';
 type Props = {
   trigger: React.ReactNode;
   children: React.ReactNode;
+  borderColor?: string;
   canOutsideClick?: boolean;
 };
 
-function Popup({ canOutsideClick=true, trigger, children }: Props) {
+function Popup({ canOutsideClick=true, borderColor, trigger, children }: Props) {
     const [isOpen, setIsOpen] = useState(false);
     const [isClosing, setIsClosing] = useState(false);
 
@@ -33,8 +34,15 @@ function Popup({ canOutsideClick=true, trigger, children }: Props) {
             onClick={canOutsideClick ? handleOutsideClick : undefined}
         >
             <div
-            className={`popup ${isClosing ? "slide-down" : "slide-up"}`}
-            onClick={(e) => e.stopPropagation()}
+                className={`popup ${isClosing ? "slide-down" : "slide-up"}`}
+                style={{
+                    border:
+                    borderColor === "cyan"
+                        ? "4px solid var(--standard-cyan)"
+                        : borderColor === "pink"
+                        ? "4px solid var(--standard-pink)"
+                        : undefined
+                }}
             >
             {children}
             </div>

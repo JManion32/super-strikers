@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 import '../css/home.css';
 import About from '../components/About.tsx';
+// @ts-ignore idk why this is necessary
 import WhatsNew from '../components/WhatsNew.tsx';
 import PrivacyPolicy from '../components/PrivacyPolicy.tsx';
 import Queue from '../components/Queue.tsx';
