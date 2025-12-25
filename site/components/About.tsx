@@ -16,8 +16,8 @@ function About() {
                 <div className="about-qa">
                     <h3>What is Super Strikers?</h3>
                     <p>
-                        Super Strikers is a 2D multiplayer browser game that combines soccer and airhockey. 
-                        Play against real opponents, and outscore them to win!
+                        Super Strikers is a 2D, fast-paced, multiplayer browser game that combines soccer and air hockey. 
+                        Play against real opponents, outscoring them to win!
                     </p>
                 </div>
                 <div className="about-qa">

@@ -25,16 +25,7 @@ function PrivacyPolicy() {
                 </div>
                 <div className="privacy-policy-rule">
                     <h3>
-                        2. Usernames
-                    </h3>
-                    <p>
-                        The username you enter is stored in your local storage and associated with 
-                        your in-game performance. This nickname is not connected to any external identity.
-                    </p>
-                </div>
-                <div className="privacy-policy-rule">
-                    <h3>
-                        3. Cookies & Session Data
+                        2. Cookies & Session Data
                     </h3>
                     <p>
                         Temporary cookies or session data may be stored
@@ -45,7 +36,7 @@ function PrivacyPolicy() {
                     </p>
                 </div>
                 <div className="privacy-policy-rule">
-                    <h3>4. Rate Limiting</h3>
+                    <h3>3. Rate Limiting</h3>
                     <p>
                         We may temporarily process your IP address to
                         prevent abuse and ensure fair usage of our services.
@@ -55,7 +46,7 @@ function PrivacyPolicy() {
                 </div>
                 <div className="privacy-policy-rule">
                     <h3>
-                        5. No Third-Party Sharing
+                        4. No Third-Party Sharing
                     </h3>
                     <p>
                         Super Strikers does not share, sell, or transfer any
@@ -66,7 +57,7 @@ function PrivacyPolicy() {
                 </div>
                 <div className="privacy-policy-rule">
                     <h3>
-                        6. Acceptance of Policy
+                        5. Acceptance of Policy
                     </h3>
                     <p>
                         By playing Super Strikers, you agree to the terms of

@@ -12,9 +12,8 @@
 
 .modal {
     position: absolute;
-
-    height: 50rem;
-    width: 50rem;
+    height: 55rem;
+    width: 55rem;
     background: var(--secondary-bg);
     color: var(--standard-white);
 

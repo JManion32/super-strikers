@@ -90,25 +90,25 @@ function Home() {
                         </button>
                     </div>
                 </div>
-            </div>
-            <div className="home-footer-container">
-                <About/>
-                <span>|</span>
-                <WhatsNew/>
-                <span>|</span>
-                <a className="footer-link-pink" onClick={handleCopy}>
-                    {copied ? "Copied!" : "Share"}
-                </a>
-                <span>|</span>
-                <a
-                    className="footer-link-cyan"
-                    href="https://docs.google.com/forms/d/e/1FAIpQLSc8LkUPkPTEdItDLcJA9tmhBx_pZ7p8q2hN1V7VMeRarb5wbw/viewform?usp=dialog>Feature Request"
-                    target="_blank"
-                >
-                    Feature Request ↗
-                </a>
-                <span>|</span>
-                <PrivacyPolicy/>
+                <div className="home-footer-container">
+                    <About/>
+                    <span>|</span>
+                    <WhatsNew/>
+                    <span>|</span>
+                    <a className="footer-link-pink" onClick={handleCopy}>
+                        {copied ? "Copied!" : "Share"}
+                    </a>
+                    <span>|</span>
+                    <a
+                        className="footer-link-cyan"
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSc8LkUPkPTEdItDLcJA9tmhBx_pZ7p8q2hN1V7VMeRarb5wbw/viewform?usp=dialog>Feature Request"
+                        target="_blank"
+                    >
+                        Feature Request ↗
+                    </a>
+                    <span>|</span>
+                    <PrivacyPolicy/>
+                </div>
             </div>
         </>
     );

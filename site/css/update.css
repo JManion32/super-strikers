@@ -1,6 +1,6 @@
 .update-container {
     padding: 1rem;
-    width: 95%;
+    width: 100%;
     border: 2px solid var(--standard-pink);
 }
 
@@ -22,5 +22,5 @@
 
 .update-container span {
     font-weight: bold;
-    color: #BBBBBB;
+    color: var(--standard-dim-white);
 }
