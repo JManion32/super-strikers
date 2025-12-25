@@ -1,0 +1,13 @@
+.whats-new-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    overflow-y: auto;
+}
+
+.whats-new-container h2 {
+    font-size: 4rem;
+    margin: 1rem 0 2rem 0;
+    color: var(--standard-cyan);
+}

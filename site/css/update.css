@@ -1,0 +1,26 @@
+.update-container {
+    padding: 1rem;
+    width: 95%;
+    border: 2px solid var(--standard-pink);
+}
+
+.update-container h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.25rem;
+    color: var(--standard-pink);
+    flex-grow: 1;
+}
+
+.update-container p {
+    margin: 0;
+}
+
+.update-header {
+    display: flex;
+    flex-direction: row;
+}
+
+.update-container span {
+    font-weight: bold;
+    color: #BBBBBB;
+}

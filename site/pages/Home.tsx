@@ -105,7 +105,7 @@ function Home() {
                     href="https://docs.google.com/forms/d/e/1FAIpQLSc8LkUPkPTEdItDLcJA9tmhBx_pZ7p8q2hN1V7VMeRarb5wbw/viewform?usp=dialog>Feature Request"
                     target="_blank"
                 >
-                    Feature Request
+                    Feature Request ↗
                 </a>
                 <span>|</span>
                 <PrivacyPolicy/>
