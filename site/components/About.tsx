@@ -1,4 +1,4 @@
-import Popup from './Popup.tsx'
+import Modal from './Modal.tsx'
 import '../css/home.css';
 import '../css/about.css';
 
@@ -6,7 +6,7 @@ function About() {
 
     return (
     <>
-        <Popup 
+        <Modal
             canOutsideClick={true}
             borderColor={"pink"}
             trigger={<a className="footer-link-pink">About</a>}
@@ -48,7 +48,7 @@ function About() {
                     GitHub
                 </a>
             </div>
-        </Popup>
+        </Modal>
     </>
   );
 }

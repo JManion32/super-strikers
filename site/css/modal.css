@@ -1,4 +1,4 @@
-.popup-container {
+.modal-container {
     position: fixed;
     inset: 0;
     background: rgba(0, 0, 0, 0.5);
@@ -10,7 +10,7 @@
     z-index: 9999;
 }
 
-.popup {
+.modal {
     position: absolute;
 
     height: 50rem;
@@ -22,7 +22,7 @@
     padding: 3rem;
 }
 
-.popup-hidden {
+.modal-hidden {
     display: none;
 }
 

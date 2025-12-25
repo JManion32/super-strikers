@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { createPortal } from "react-dom";
 
-import '../css/popup.css';
+import '../css/modal.css';
 
 type Props = {
   trigger: React.ReactNode;
@@ -10,11 +10,11 @@ type Props = {
   canOutsideClick?: boolean;
 };
 
-function Popup({ canOutsideClick=true, borderColor, trigger, children }: Props) {
+function Modal({ canOutsideClick=true, borderColor, trigger, children }: Props) {
     const [isOpen, setIsOpen] = useState(false);
     const [isClosing, setIsClosing] = useState(false);
 
-    const closePopup = () => {
+    const closeModal = () => {
         setIsClosing(true);
         setTimeout(() => {
             setIsClosing(false);
@@ -23,18 +23,18 @@ function Popup({ canOutsideClick=true, borderColor, trigger, children }: Props) 
     };
 
     const handleOutsideClick = (e: React.MouseEvent<HTMLDivElement>) => {
-        if ((e.target as HTMLElement).classList.contains("popup-container")) {
-            closePopup();
+        if ((e.target as HTMLElement).classList.contains("modal-container")) {
+            closeModal();
         }
     };
 
-    const popup = isOpen ? (
+    const modal = isOpen ? (
         <div
-            className="popup-container"
+            className="modal-container"
             onClick={canOutsideClick ? handleOutsideClick : undefined}
         >
             <div
-                className={`popup ${isClosing ? "slide-down" : "slide-up"}`}
+                className={`modal ${isClosing ? "slide-down" : "slide-up"}`}
                 style={{
                     border:
                     borderColor === "cyan"
@@ -56,13 +56,13 @@ function Popup({ canOutsideClick=true, borderColor, trigger, children }: Props) 
                 {trigger}
             </span>
 
-            {popup &&
+            {modal &&
                 createPortal(
-                popup,
-                document.getElementById("popup-root")!
+                modal,
+                document.getElementById("modal-root")!
             )}
         </>
     );
 }
 
-export default Popup;
+export default Modal;
