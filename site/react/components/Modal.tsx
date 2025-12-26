@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { createPortal } from 'react-dom';
 
-import '../css/modal.css';
+import '../../css/modal.css';
 
 type Props = {
     trigger: React.ReactNode;

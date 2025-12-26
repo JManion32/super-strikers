@@ -1,7 +1,7 @@
-import Modal from './Modal.tsx';
-import '../css/home.css';
-import '../css/whats-new.css';
-import Update from './Update.tsx';
+import Modal from '../components/Modal.tsx';
+import '../../css/home.css';
+import '../../css/whats-new.css';
+import Update from '../components/Update.tsx';
 
 function WhatsNew() {
     return (

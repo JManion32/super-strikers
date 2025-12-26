@@ -1,6 +1,6 @@
-import Modal from './Modal.tsx';
-import '../css/home.css';
-import '../css/privacy-policy.css';
+import Modal from '../components/Modal.tsx';
+import '../../css/home.css';
+import '../../css/privacy-policy.css';
 
 function PrivacyPolicy() {
     return (

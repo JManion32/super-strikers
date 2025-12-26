@@ -1,5 +1,5 @@
 //import { useState } from 'react';
-import '../css/update.css';
+import '../../css/update.css';
 
 type Props = {
     title: string;

@@ -1,9 +1,9 @@
 import { createRoot } from 'react-dom/client';
 import './css/index.css';
 import './css/colors.css';
-import Home from './pages/Home.tsx';
-import CustomMatch from './pages/CustomMatch.tsx';
-import Game from './pages/Game.tsx';
+import Home from './react/pages/Home.tsx';
+import CustomMatch from './react/pages/CustomMatch.tsx';
+import Game from './react/pages/Game.tsx';
 // @ts-ignore
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 

@@ -1,19 +1,19 @@
 import { useState } from 'react';
-import '../css/custom-match.css';
+import '../../css/custom-match.css';
 import Queue from '../components/Queue.tsx';
 // @ts-ignore
 import { useNavigate } from 'react-router-dom';
 
-import festive_mode from '../assets/festive_mode.png';
-import forest_mode from '../assets/forest_mode.png';
-import galaxy_mode from '../assets/galaxy_mode.png';
-import halloween_mode from '../assets/halloween_mode.png';
-import monochrome_mode from '../assets/monochrome_mode.png';
-import neon_mode from '../assets/neon_mode.png';
-import premium_mode from '../assets/premium_mode.png';
-import retro_mode from '../assets/retro_mode.png';
-import voltage_mode from '../assets/voltage_mode.png';
-import warm_mode from '../assets/warm_mode.png';
+import festive_mode from '/assets/festive_mode.png';
+import forest_mode from '/assets/forest_mode.png';
+import galaxy_mode from '/assets/galaxy_mode.png';
+import halloween_mode from '/assets/halloween_mode.png';
+import monochrome_mode from '/assets/monochrome_mode.png';
+import neon_mode from '/assets/neon_mode.png';
+import premium_mode from '/assets/premium_mode.png';
+import retro_mode from '/assets/retro_mode.png';
+import voltage_mode from '/assets/voltage_mode.png';
+import warm_mode from '/assets/warm_mode.png';
 
 function CustomMatch() {
     const navigate = useNavigate();
@@ -111,7 +111,8 @@ function CustomMatch() {
                             </div>
                             <button
                                 className="create-match-btn gradient-btn"
-                                onClick={() => setIsCreating(!isCreating)}
+                                //onClick={() => setIsCreating(!isCreating)}
+                                onClick={() => navigate('/game')}
                             >
                                 <span>{isCreating ? 'Cancel' : 'Create'}</span>
                             </button>

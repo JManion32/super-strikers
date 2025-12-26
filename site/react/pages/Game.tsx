@@ -1,5 +1,5 @@
 //import { useState } from 'react';
-import '../css/game.css';
+import '../../css/game.css';
 // @ts-ignore
 import { useNavigate } from 'react-router-dom';
 

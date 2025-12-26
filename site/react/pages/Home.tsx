@@ -2,13 +2,13 @@ import { useEffect, useState } from 'react';
 // @ts-ignore
 import { useNavigate } from 'react-router-dom';
 
-import '../css/home.css';
-import About from '../components/About.tsx';
+import '../../css/home.css';
+import About from '../modals/About.tsx';
 // @ts-ignore idk why this is necessary
-import WhatsNew from '../components/WhatsNew.tsx';
-import PrivacyPolicy from '../components/PrivacyPolicy.tsx';
+import WhatsNew from '../modals/WhatsNew.tsx';
+import PrivacyPolicy from '../modals/PrivacyPolicy.tsx';
 import Queue from '../components/Queue.tsx';
-import { badName } from '../utils/checkName.ts';
+import { badName } from '../../utils/checkName.ts';
 
 function Home() {
     const navigate = useNavigate();

@@ -1,6 +1,6 @@
-import Modal from './Modal.tsx';
-import '../css/home.css';
-import '../css/about.css';
+import Modal from '../components/Modal.tsx';
+import '../../css/home.css';
+import '../../css/about.css';
 
 function About() {
     return (
