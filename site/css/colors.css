@@ -17,7 +17,9 @@
     --standard-pink: #f0f;
     --standard-pink-hover: #ff57ff;
     --cyan-pink-gradient: linear-gradient(to right, var(--standard-cyan), var(--standard-pink));
+    --queue-border: #00ff9c;
 
+    --rematch-red: #ff2424;
     --danger-red: #f00;
     --standard-yellow: #ffff00;
     --standard-anchor: #7799ff;

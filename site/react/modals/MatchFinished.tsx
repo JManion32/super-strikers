@@ -44,7 +44,7 @@ function MatchFinished() {
                     </div>
                     <div className="continue-btns-container">
                         <button
-                            className="rematch-btn gradient-btn"
+                            className="rematch-btn"
                             onClick={() => setIsRematching(!isRematching)}
                         >
                             <span>{isRematching ? 'Cancel' : 'Rematch!'}</span>

@@ -7,7 +7,8 @@
     width: 26rem;
     padding: 1rem;
 
-    border: 1px solid yellow;
+    border: 1px solid var(--queue-border);
+    border-radius: 4px;
     background: var(--secondary-bg);
     color: var(--standard-white);
 
