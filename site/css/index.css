@@ -90,3 +90,8 @@ body {
 .gradient-btn-disabled span {
     filter: saturate(40%) brightness(70%);
 }
+
+.temp-btn {
+    background: yellow;
+    color: black;
+}

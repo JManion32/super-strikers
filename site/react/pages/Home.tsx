@@ -67,7 +67,7 @@ function Home() {
                     </p>
                     <input
                         type="text"
-                        maxLength={24}
+                        maxLength={12}
                         autoComplete="off"
                         id="name-input"
                         className={`name-input ${isQueueing ? 'input-disabled' : ''}`}

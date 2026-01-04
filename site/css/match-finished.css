@@ -1,0 +1,96 @@
+.match-finished-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+}
+
+.match-finished-header {
+    font-size: 5rem;
+    margin-bottom: 4rem;
+}
+
+.final-score-container, .final-name-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.final-score-1, .final-score-2, .final-name-1, .final-name-2 {
+    width: 12rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.final-score-1 h2, .final-score-2 h2 {
+    font-size: 10rem;
+    margin: 0;
+}
+
+.final-score-1 {
+    color: var(--standard-cyan);
+}
+
+.final-score-2 {
+    color: var(--standard-pink);
+}
+
+.final-name-1, .final-name-2 {
+    font-size: 1.1rem;
+}
+
+.final-name-1 {
+    color: var(--standard-cyan);
+}
+
+
+.final-name-2 {
+    color: var(--standard-pink);
+}
+
+.score-dash {
+    font-weight: bold;
+    font-size: 6rem;
+    width: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.final-name-spacer {
+    width: 8rem;
+}
+
+.continue-btns-container {   
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.rematch-btn {
+    font-size: 1.40rem;
+    padding: 0.75rem;
+    font-weight: bold;
+    border-radius: 0.4rem;
+    transition: var(--site-transition);
+}
+
+.continue-home-btn {
+    padding: 0.75rem;
+    font-size: 1.40rem;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    background: var(--secondary-bg);
+    border: 1px solid var(--standard-light-gray);
+    color: var(--standard-white);
+    transition: var(--site-transition);
+}
+
+.continue-home-btn:hover {
+    background: var(--standard-light-gray);
+    cursor: pointer;
+}

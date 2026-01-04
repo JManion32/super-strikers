@@ -10,6 +10,8 @@
     border: 1px solid yellow;
     background: var(--secondary-bg);
     color: var(--standard-white);
+
+    z-index: 200;
 }
 
 .queue-container p {

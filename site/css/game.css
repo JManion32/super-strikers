@@ -1,0 +1,56 @@
+.game-container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.scoreboard-container {
+    display: flex;
+    flex-direction: row;
+    height: 4rem;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: var(--standard-white);
+}
+
+.score-1, .score-2 {
+    width: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.score-1 {
+    background: var(--standard-cyan);
+    color: var(--standard-black);
+}
+
+.score-2 {
+    background: var(--standard-pink);
+    color: var(--standard-white);
+}
+
+.game-time {
+    width: 16rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.game-canvas {
+    width: 82rem;
+    height: 48rem;
+    background: var(--standard-light-gray);
+}
+
+.boost-meter {
+    background: var(--cyan-pink-gradient);
+    margin-top: 2rem;
+    width: 32rem;
+    height: 2rem;
+}
