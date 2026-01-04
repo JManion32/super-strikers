@@ -1,29 +1,34 @@
 /* Mobile */
 @media (width <= 640px) {
     :root {
+        --site-font-size: 10px;
     }
 }
 
 /* Tablets */
 @media (width >= 641px) {
     :root {
+        --site-font-size: 12px;
     }
 }
 
 /* Small Laptops */
 @media (width >= 1024px) {
     :root {
+        --site-font-size: 14px;
     }
 }
 
 /* Desktop */
 @media (width >= 1280px) {
     :root {
+        --site-font-size: 16px;
     }
 }
 
 /* Big Desktops */
 @media (width >= 2560px) {
     :root {
+        --site-font-size: 18px;
     }
 }
