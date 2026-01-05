@@ -25,4 +25,47 @@
     --debug-orange: #ffa500;
     --standard-anchor: #7799ff;
     --standard-anchor-hover: #94afff;
+
+    /* [data-theme=neon] (default) */
+    --score-1-bg: ;
+    --score-2-bg: ;
+    --score-1-color: ;
+    --score-2-color: ;
+    
+}
+
+[data-theme="forest"] {
+    
+}
+
+[data-theme="galaxy"] {
+    
+}
+
+[data-theme="voltage"] {
+    
+}
+
+[data-theme="monochrome"] {
+    
+}
+
+[data-theme="retro"] {
+    
+}
+
+[data-theme="halloween"] {
+    
+}
+
+[data-theme="festive"] {
+    
+}
+
+[data-theme="airhockey"] {
+    
+}
+
+[data-theme="soccer"] {
+    
 }
