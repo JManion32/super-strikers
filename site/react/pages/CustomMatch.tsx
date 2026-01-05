@@ -18,11 +18,11 @@ import soccer_mode from '/assets/soccer_mode.png';
 function CustomMatch() {
     const navigate = useNavigate();
     const [joinCode, setJoinCode] = useState('');
-    const [createCode, setCreateCode] = useState('');
+    const [createCode] = useState('');
     const [selectedMap, setSelectedMap] = useState('Random');
 
     const [isJoining, setIsJoining] = useState(false);
-    const [isCreating, setIsCreating] = useState(false);
+    const [isCreating] = useState(false);
 
     const maps = [
         { name: 'Neon', img: neon_mode },
