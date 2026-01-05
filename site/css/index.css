@@ -92,6 +92,18 @@ body {
 }
 
 .temp-btn {
-    background: yellow;
-    color: black;
+    padding: 0.25rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    border: 2px solid var(--debug-orange);
+    background: var(--site-bg);
+    color: var(--standard-white);
+    transition: var(--site-transition);
+}
+
+.temp-btn:hover {
+    background: var(--debug-orange);
+    color: var(--standard-black);
+    cursor: pointer;
 }

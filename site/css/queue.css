@@ -18,3 +18,12 @@
 .queue-container p {
     margin: 0;
 }
+
+.queue-container p:not(:first-child) {
+    margin-top: 0.25rem;
+}
+
+.error-msg {
+    color: var(--danger-red);
+    font-style: italic;
+}

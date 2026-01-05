@@ -6,6 +6,7 @@ function Queue() {
         <>
             <div className="queue-container">
                 <p>Queueing for online match...</p>
+                <p className="error-msg">No backend implementation, unable to queue.</p>
             </div>
         </>
     );

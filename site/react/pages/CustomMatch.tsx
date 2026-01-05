@@ -10,10 +10,10 @@ import galaxy_mode from '/assets/galaxy_mode.png';
 import halloween_mode from '/assets/halloween_mode.png';
 import monochrome_mode from '/assets/monochrome_mode.png';
 import neon_mode from '/assets/neon_mode.png';
-import premium_mode from '/assets/premium_mode.png';
+import air_hockey_mode from '/assets/air_hockey_mode.png';
 import retro_mode from '/assets/retro_mode.png';
 import voltage_mode from '/assets/voltage_mode.png';
-import warm_mode from '/assets/warm_mode.png';
+import soccer_mode from '/assets/soccer_mode.png';
 
 function CustomMatch() {
     const navigate = useNavigate();
@@ -26,15 +26,15 @@ function CustomMatch() {
 
     const maps = [
         { name: 'Neon', img: neon_mode },
-        { name: 'Festive', img: festive_mode },
         { name: 'Forest', img: forest_mode },
         { name: 'Galaxy', img: galaxy_mode },
-        { name: 'Halloween', img: halloween_mode },
-        { name: 'Monochrome', img: monochrome_mode },
-        { name: 'Gilded', img: premium_mode },
-        { name: 'Retro', img: retro_mode },
         { name: 'Voltage', img: voltage_mode },
-        { name: 'Warm', img: warm_mode },
+        { name: 'Monochrome', img: monochrome_mode },
+        { name: 'Retro', img: retro_mode },
+        { name: 'Halloween', img: halloween_mode },
+        { name: 'Festive', img: festive_mode },
+        { name: 'Air Hockey', img: air_hockey_mode },
+        { name: 'Soccer', img: soccer_mode },
     ];
 
     function selectMap(mapName: string) {
